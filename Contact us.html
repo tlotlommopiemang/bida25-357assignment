@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eagle Logistics - Contact Us</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header>
+    <h1>Eagle Logistics</h1>
+    <p>Taking you places in eagle wings</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="transport.html">Transport Options</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach out to us using the details below:</p>
+    <ul>
+      <li>Email: info@eaglelogistics.com</li>
+      <li>Phone: +267 123 4567</li>
+      <li>Address: Eagle Logistics HQ, Taung, Botswana</li>
+    </ul>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message"></textarea><br><br>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+  <!-- Back to Top Button -->
+<button id="backToTop">↑ Top</button>
+
+<!-- JavaScript -->
+<script>
+  const nav = document.querySelector("nav");
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    // Add shadow to nav when scrolled
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+
+    // Show back-to-top button when scrolled down
+    if (window.scrollY > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+
+  // Smooth scroll to top
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+  <footer>
+    <p>&copy; 2026 Eagle Logistics. All rights reserved.</p>
+  </footer>
+</body>
+</html>
